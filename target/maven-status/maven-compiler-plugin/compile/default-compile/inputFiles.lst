@@ -1,0 +1,12 @@
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/SpringBootSopaWsApplication.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/loaneligibility/CustomerRequest.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/endpoint/LoanEligibilityindicatorEndpoint.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/config/SoapWSConfig.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/mps/emoney/topup/InquiryResult.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/loaneligibility/ObjectFactory.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/service/LoanEligibilityService.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/mps/emoney/topup/InquiryPendingTopUpRequest.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/loaneligibility/package-info.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/mps/emoney/topup/package-info.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/mps/emoney/topup/ObjectFactory.java
+/home/anuj/anuj/SOAP/spring-boot-soap-ws-master/src/main/java/com/javatechie/spring/soap/api/loaneligibility/Acknowledgement.java
