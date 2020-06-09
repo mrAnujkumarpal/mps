@@ -1,5 +1,9 @@
+com/emoney/mps/api/topup/ArrayOfString.class
+com/emoney/mps/api/topup/PaidBill.class
 com/emoney/mps/api/topup/ReversePendingTopUpRequest.class
 com/emoney/mps/api/topup/package-info.class
+com/emoney/mps/api/topup/BillDetail.class
+com/emoney/mps/api/topup/Status.class
 com/emoney/mps/api/topup/ObjectFactory.class
 com/emoney/mps/api/topup/PendingTopUpRequest.class
 com/emoney/mps/api/topup/InquiryResult.class

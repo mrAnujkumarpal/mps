@@ -1,9 +1,7 @@
 package com.emoney.mps.api.service;
 
-import com.emoney.mps.api.topup.InquiryPendingTopUpRequest;
-import com.emoney.mps.api.topup.InquiryResult;
-import com.emoney.mps.api.topup.ReversePendingTopUpRequest;
-import com.emoney.mps.api.topup.ReverseResult;
+import com.emoney.mps.api.dao.TrueStatus;
+import com.emoney.mps.api.topup.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,25 +13,51 @@ public class ReversePendingTopUpService {
 
         ReverseResult rev = new ReverseResult();
         List<String> mismatchCriteriaList = rev.getCriteriaMismatch();
-
-        if (!((request.getLanguage()).length() != 2)) {
-            mismatchCriteriaList.add("Length language contains only two character.");
+        if((request.getLanguage()).length() != 2) {
+            mismatchCriteriaList.add("Language contains only two character.");
         }
-        if (!((request.getChannelID()).length() > 1)) {
-            mismatchCriteriaList.add("Channel is not correct.");
+        if( request.getCompanyCode() == 0 ) {
+            mismatchCriteriaList.add("Company code is required.");
         }
-        if (!(request.getBillKey1() != null)) {
-            mismatchCriteriaList.add("Card number is required. ");
+        //Integer.toString(num).length()
+        if((Integer.toString(request.getCompanyCode()).length()) != 4) {
+            mismatchCriteriaList.add("Company code contains only four digit.");
         }
-        if (!(request.getBillKey1() != null && (request.getBillKey1()).length() !=16)) {
-            mismatchCriteriaList.add("Card number length is not correct. ");
+        if((request.getChannelID()).length() > 1) {
+            mismatchCriteriaList.add("Channel ID is not correct.");
+        }
+        if((request.getBillKey1()).length()==0) {
+            mismatchCriteriaList.add("Prepaid card number (BillKey1) is required. ");
+        }
+        if(request.getBillKey1() != null && (request.getBillKey1()).length() !=16) {
+            mismatchCriteriaList.add("Prepaid card number length (BillKey1) contains 16 characters");
+        }
+        if((request.getBillKey2()).length()==0 ){
+            mismatchCriteriaList.add("Amount (BillKey2) is required. ");
+        }
+        if((request.getReference1()).length()==0  ){
+            mismatchCriteriaList.add("Host receipt number (Reference1) is required.");
+        }
+        if((request.getReference2()).length()==0  ){
+            mismatchCriteriaList.add("ATM id (Reference2)  is required.");
+        }
+        if((request.getReference3()).length()==0  ){
+            mismatchCriteriaList.add("SOA terminal id (Reference3) is required.");
+        }
+        if(request.getReference4() != null && ((request.getReference4()).length() < 10 )) {
+            mismatchCriteriaList.add("Channel name (Reference4) contains only ten character.");
+        }
+        if((request.getReference6()).length()==0 ){
+            mismatchCriteriaList.add("Bank account no (Reference6) is required.");
         }
         if (mismatchCriteriaList.size() > 0) {
 
-            rev.setIsError(false);
+
         } else {
 
-            rev.setIsError(true);
+            TrueStatus ts=new TrueStatus();
+            rev.setStatus(ts.okStatus());
+
             mismatchCriteriaList.clear();
         }
         return rev;

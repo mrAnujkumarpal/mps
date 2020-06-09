@@ -2,12 +2,11 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://www.emoney.com/mps/api/topup"
             xmlns:tns="http://www.emoney.com/mps/api/topup"
-
             elementFormDefault="qualified">
 
-    <xsd:element name="inquiryPendingTopUpRequest">
-        <xsd:complexType>
-            <xsd:sequence>
+<xsd:element name="inquiryPendingTopUpRequest">
+      <xsd:complexType>
+           <xsd:sequence>
                 <xsd:element name="language" type="xsd:string" />
                 <xsd:element name="trxDateTime" type="xsd:dateTime" />
                 <xsd:element name="transmissionDateTime" type="xsd:dateTime" />
@@ -27,10 +26,10 @@
         </xsd:complexType>
     </xsd:element>
 
-    <xsd:element name="inquiryResult">
-        <xsd:complexType>
-            <xsd:sequence>
 
+<xsd:element name="inquiryResult">
+    <xsd:complexType>
+         <xsd:sequence>
                 <xsd:element name="currency" type="xsd:string" />
                 <xsd:element name="billInfo1" type="xsd:string" />
                 <xsd:element name="billInfo2" type="xsd:string" />
@@ -40,14 +39,9 @@
                 <xsd:element name="billInfo6" type="xsd:string" />
                 <xsd:element name="billInfo7" type="xsd:string" />
                 <xsd:element name="billInfo8" type="xsd:string" />
-                <xsd:element name="billCode" type="xsd:int" />
-                <xsd:element name="billName" type="xsd:string" />
-                <xsd:element name="billShortName" type="xsd:string" />
-                <xsd:element name="billAmount" type="xsd:string" />
 
-                <xsd:element name="isError" type="xsd:boolean" />
-                <xsd:element name="errorCode" type="xsd:string" />
-                <xsd:element name="statusDescription" type="xsd:string" />
+                <xsd:element type="tns:billDetail" name="billDetails" minOccurs="0"/>
+                <xsd:element type="tns:status" name="status" minOccurs="0"/>
 
                 <xsd:element name="criteriaMismatch" type="xsd:string"
                              maxOccurs="unbounded" />
@@ -70,6 +64,7 @@
                 <xsd:element name="billKey2" type="xsd:string" />
                 <xsd:element name="billKey3" type="xsd:string" />
                 <xsd:element name="paidBills" type="xsd:string" />
+
                 <xsd:element name="paymentAmount" type="xsd:int" />
                 <xsd:element name="currency" type="xsd:string" />
                 <xsd:element name="transactionId" type="xsd:string" />
@@ -99,9 +94,7 @@
                 <xsd:element name="billInfo10" type="xsd:string" />
                 <xsd:element name="billInfo11" type="xsd:string" />
 
-                <xsd:element name="isError" type="xsd:boolean" />
-                <xsd:element name="errorCode" type="xsd:string" />
-                <xsd:element name="statusDescription" type="xsd:string" />
+                <xsd:element type="tns:status" name="status" minOccurs="0"/>
 
                 <xsd:element name="criteriaMismatch" type="xsd:string"
                              maxOccurs="unbounded" />
@@ -142,17 +135,41 @@
     <xsd:element name="reverseResult">
         <xsd:complexType>
             <xsd:sequence>
-
-                <xsd:element name="isError" type="xsd:boolean" />
-                <xsd:element name="errorCode" type="xsd:string" />
-                <xsd:element name="statusDescription" type="xsd:string" />
-
-                <xsd:element name="criteriaMismatch" type="xsd:string"
-                             maxOccurs="unbounded" />
-
+                <xsd:element type="tns:status" name="status" minOccurs="0"/>
+                <xsd:element name="criteriaMismatch" type="xsd:string"  maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
+
+    <xsd:complexType name="paidBill">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="status">
+        <xsd:sequence>
+            <xsd:element name="isError" type="xsd:boolean" />
+            <xsd:element type="xsd:string" name="errorCode"/>
+            <xsd:element type="xsd:string" name="statusDescription"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="billDetail">
+        <xsd:sequence>
+            <xsd:element name="billCode" type="xsd:string" />
+            <xsd:element name="billName" type="xsd:string" />
+            <xsd:element name="billShortName" type="xsd:string" />
+            <xsd:element name="billAmount" type="xsd:string" />
+            <xsd:element  name="reference1" type="xsd:string"/>
+            <xsd:element  name="reference2" type="xsd:string"/>
+            <xsd:element  name="reference3" type="xsd:string"/>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+
 
 
 </xsd:schema>
