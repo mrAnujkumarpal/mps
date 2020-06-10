@@ -24,6 +24,12 @@ public class PendingTopUpService {
         if((Integer.toString(request.getCompanyCode()).length()) != 4) {
             mismatchCriteriaList.add("Company code contains only four digit.");
         }
+        if((request.getChannelID()).length()==0) {
+            mismatchCriteriaList.add("Channel ID is required. ");
+        }
+        if((request.getChannelID()).length()==0) {
+            mismatchCriteriaList.add("Channel ID is required. ");
+        }
         if((request.getChannelID()).length() > 1) {
             mismatchCriteriaList.add("Channel ID is not correct.");
         }
@@ -33,23 +39,35 @@ public class PendingTopUpService {
         if(request.getBillKey1() != null && (request.getBillKey1()).length() !=16) {
             mismatchCriteriaList.add("Prepaid card number length (BillKey1) contains 16 characters");
         }
-        if((request.getBillKey2()).length()==0 ){
+        if((request.getBillKey2()).length()==0){
             mismatchCriteriaList.add("Amount (BillKey2) is required. ");
         }
-        if((request.getReference1()).length()==0  ){
+        if(request.getPaymentAmount() ==0){
+            mismatchCriteriaList.add("Payment amount is required. ");
+        }
+        if((request.getCurrency()).length()==0){
+            mismatchCriteriaList.add("Currency is required.");
+        }
+        if((request.getTerminalID()).length()==0){
+            mismatchCriteriaList.add("Transaction is required.");
+        }
+        if((request.getPaidBills()).length() <= 1){
+            mismatchCriteriaList.add("Paid bills is required.");
+        }
+        if((request.getReference1()).length()==0){
             mismatchCriteriaList.add("Host receipt number (Reference1) is required.");
         }
-        if((request.getReference2()).length()==0  ){
+        if((request.getReference2()).length()==0){
             mismatchCriteriaList.add("ATM id (Reference2)  is required.");
         }
-        if((request.getReference3()).length()==0  ){
+        if((request.getReference3()).length()==0){
             mismatchCriteriaList.add("SOA terminal id (Reference3) is required.");
         }
         if(request.getReference4() != null && ((request.getReference4()).length() < 10 )) {
             mismatchCriteriaList.add("Channel name (Reference4) contains only ten character.");
         }
-        if((request.getReference6()).length()==0 ){
-            mismatchCriteriaList.add("Bank account no (Reference6) is required.");
+        if((request.getReference5()).length()==0){
+            mismatchCriteriaList.add("Bank card no (Reference5) is required.");
         }
         if (mismatchCriteriaList.size() > 0) {
 
