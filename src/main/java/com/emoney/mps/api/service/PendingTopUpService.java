@@ -1,6 +1,6 @@
 package com.emoney.mps.api.service;
 
-import com.emoney.mps.api.dao.TrueStatus;
+import com.emoney.mps.api.dao.SuccessStatus;
 import com.emoney.mps.api.topup.*;
 import org.springframework.stereotype.Service;
 
@@ -86,7 +86,7 @@ public class PendingTopUpService {
             paymentResult.setBillInfo10("");
             paymentResult.setBillInfo11("");
 
-            TrueStatus ts=new TrueStatus();
+            SuccessStatus ts=new SuccessStatus();
 
             paymentResult.setStatus(ts.okStatus());
             mismatchCriteriaList.clear();

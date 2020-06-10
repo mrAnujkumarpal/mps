@@ -1,6 +1,6 @@
 package com.emoney.mps.api.service;
 
-import com.emoney.mps.api.dao.TrueStatus;
+import com.emoney.mps.api.dao.SuccessStatus;
 import com.emoney.mps.api.topup.*;
 import org.springframework.stereotype.Service;
 
@@ -64,7 +64,7 @@ public class ReversePendingTopUpService {
 
         } else {
 
-            TrueStatus ts=new TrueStatus();
+            SuccessStatus ts=new SuccessStatus();
             rev.setStatus(ts.okStatus());
 
             mismatchCriteriaList.clear();

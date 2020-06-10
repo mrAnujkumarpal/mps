@@ -1,7 +1,7 @@
 package com.emoney.mps.api.service;
 
 
-import com.emoney.mps.api.dao.TrueStatus;
+import com.emoney.mps.api.dao.SuccessStatus;
 import com.emoney.mps.api.topup.BillDetail;
 import com.emoney.mps.api.topup.InquiryResult;
 import com.emoney.mps.api.topup.InquiryPendingTopUpRequest;
@@ -61,7 +61,7 @@ public class InquiryPendingTopUpService {
 
 
         } else {
-            TrueStatus ts=new TrueStatus();
+            SuccessStatus ts=new SuccessStatus();
 
             BillDetail billDetail=new BillDetail();
             billDetail.setBillCode("01");
