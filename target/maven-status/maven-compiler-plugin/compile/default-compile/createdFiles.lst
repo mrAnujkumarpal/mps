@@ -1,5 +1,6 @@
 com/emoney/mps/api/topup/ArrayOfString.class
 com/emoney/mps/api/topup/PaidBill.class
+com/emoney/mps/api/service/validate/ValidationWS.class
 com/emoney/mps/api/topup/ReversePendingTopUpRequest.class
 com/emoney/mps/api/topup/package-info.class
 com/emoney/mps/api/topup/BillDetail.class

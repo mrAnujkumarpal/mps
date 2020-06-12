@@ -39,7 +39,23 @@
                 <xsd:element name="billInfo6" type="xsd:string" />
                 <xsd:element name="billInfo7" type="xsd:string" />
                 <xsd:element name="billInfo8" type="xsd:string" />
-
+             <xsd:element name="billInfo9" type="xsd:string" />
+             <xsd:element name="billInfo10" type="xsd:string" />
+             <xsd:element name="billInfo11" type="xsd:string" />
+             <xsd:element name="billInfo12" type="xsd:string" />
+             <xsd:element name="billInfo13" type="xsd:string" />
+             <xsd:element name="billInfo14" type="xsd:string" />
+             <xsd:element name="billInfo15" type="xsd:string" />
+             <xsd:element name="billInfo16" type="xsd:string" />
+             <xsd:element name="billInfo17" type="xsd:string" />
+             <xsd:element name="billInfo18" type="xsd:string" />
+             <xsd:element name="billInfo19" type="xsd:string" />
+             <xsd:element name="billInfo20" type="xsd:string" />
+             <xsd:element name="billInfo21" type="xsd:string" />
+             <xsd:element name="billInfo22" type="xsd:string" />
+             <xsd:element name="billInfo23" type="xsd:string" />
+             <xsd:element name="billInfo24" type="xsd:string" />
+             <xsd:element name="billInfo25" type="xsd:string" />
                 <xsd:element type="tns:billDetail" name="billDetails" minOccurs="0"/>
                 <xsd:element type="tns:status" name="status" minOccurs="0"/>
 
@@ -93,7 +109,20 @@
                 <xsd:element name="billInfo9" type="xsd:string" />
                 <xsd:element name="billInfo10" type="xsd:string" />
                 <xsd:element name="billInfo11" type="xsd:string" />
-
+                <xsd:element name="billInfo12" type="xsd:string" />
+                <xsd:element name="billInfo13" type="xsd:string" />
+                <xsd:element name="billInfo14" type="xsd:string" />
+                <xsd:element name="billInfo15" type="xsd:string" />
+                <xsd:element name="billInfo16" type="xsd:string" />
+                <xsd:element name="billInfo17" type="xsd:string" />
+                <xsd:element name="billInfo18" type="xsd:string" />
+                <xsd:element name="billInfo19" type="xsd:string" />
+                <xsd:element name="billInfo20" type="xsd:string" />
+                <xsd:element name="billInfo21" type="xsd:string" />
+                <xsd:element name="billInfo22" type="xsd:string" />
+                <xsd:element name="billInfo23" type="xsd:string" />
+                <xsd:element name="billInfo24" type="xsd:string" />
+                <xsd:element name="billInfo25" type="xsd:string" />
                 <xsd:element type="tns:status" name="status" minOccurs="0"/>
 
                 <xsd:element name="criteriaMismatch" type="xsd:string"
