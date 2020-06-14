@@ -136,7 +136,7 @@ public class InquiryPendingTopUpService extends ValidationWS{
 
     }
 
-    public static InquiryPendingTopUpRequest trimSoapInquiryReq(InquiryPendingTopUpRequest request){
+    private static InquiryPendingTopUpRequest trimSoapInquiryReq(InquiryPendingTopUpRequest request){
 
         InquiryPendingTopUpRequest req=new InquiryPendingTopUpRequest();
         req.setLanguage(request.getLanguage().trim());

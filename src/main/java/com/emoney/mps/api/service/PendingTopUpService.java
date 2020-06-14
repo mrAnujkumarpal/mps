@@ -135,7 +135,7 @@ public class PendingTopUpService extends ValidationWS {
     }
 
 
-    public PendingTopUpRequest trimSoapPendingReq (PendingTopUpRequest request){
+    private PendingTopUpRequest trimSoapPendingReq (PendingTopUpRequest request){
         PendingTopUpRequest req=new PendingTopUpRequest();
 
         req.setLanguage(request.getLanguage().trim());

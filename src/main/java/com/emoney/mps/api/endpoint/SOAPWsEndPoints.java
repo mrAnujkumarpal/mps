@@ -1,4 +1,5 @@
 package com.emoney.mps.api.endpoint;
+import com.emoney.mps.api.service.CheckStatusInquiryService;
 import com.emoney.mps.api.service.InquiryPendingTopUpService;
 import com.emoney.mps.api.service.PendingTopUpService;
 import com.emoney.mps.api.service.ReversePendingTopUpService;
@@ -22,6 +23,9 @@ public class SOAPWsEndPoints {
     @Autowired
     private ReversePendingTopUpService reversePendingTopUpService;
 
+    @Autowired
+    private CheckStatusInquiryService checkStatusInquiryService;
+
 
 
     @PayloadRoot(namespace = NAMESPACE, localPart = "inquiryPendingTopUpRequest")
@@ -41,5 +45,12 @@ public class SOAPWsEndPoints {
     public ReverseResult revTopUpInquiry(@RequestPayload ReversePendingTopUpRequest request) {
         return reversePendingTopUpService.reversePendingTopUpReq(request);
     }
+
+    @PayloadRoot(namespace = NAMESPACE, localPart = "checkStatusInquiryRequest")
+    @ResponsePayload
+    public CheckStatusResp ckStatusInquiry(@RequestPayload CheckStatusInquiryRequest request) {
+        return checkStatusInquiryService.ckStatusInquiryReq(request);
+    }
+
 }
 

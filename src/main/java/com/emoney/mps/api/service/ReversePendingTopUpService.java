@@ -135,7 +135,7 @@ public class ReversePendingTopUpService extends ValidationWS {
 
     }
 
-    public  ReversePendingTopUpRequest trimRevPendingSoapReq(ReversePendingTopUpRequest request){
+    private ReversePendingTopUpRequest trimRevPendingSoapReq(ReversePendingTopUpRequest request){
         ReversePendingTopUpRequest req=new ReversePendingTopUpRequest();
 
         req.setLanguage(request.getLanguage().trim());

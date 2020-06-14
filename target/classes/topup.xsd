@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.emoney.com/mps/api/topup"
-            xmlns:tns="http://www.emoney.com/mps/api/topup"
-            elementFormDefault="qualified">
-
-<xsd:element name="inquiryPendingTopUpRequest">
-      <xsd:complexType>
-           <xsd:sequence>
+<xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.emoney.com/mps/api/topup"
+        xmlns:tns="http://www.emoney.com/mps/api/topup"
+        elementFormDefault="qualified">
+    <xsd:element name="inquiryPendingTopUpRequest">
+        <xsd:complexType>
+            <xsd:sequence>
                 <xsd:element name="language" type="xsd:string" />
                 <xsd:element name="trxDateTime" type="xsd:dateTime" />
                 <xsd:element name="transmissionDateTime" type="xsd:dateTime" />
@@ -25,11 +25,9 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-
-<xsd:element name="inquiryResult">
-    <xsd:complexType>
-         <xsd:sequence>
+    <xsd:element name="inquiryResult">
+        <xsd:complexType>
+            <xsd:sequence>
                 <xsd:element name="currency" type="xsd:string" />
                 <xsd:element name="billInfo1" type="xsd:string" />
                 <xsd:element name="billInfo2" type="xsd:string" />
@@ -39,34 +37,30 @@
                 <xsd:element name="billInfo6" type="xsd:string" />
                 <xsd:element name="billInfo7" type="xsd:string" />
                 <xsd:element name="billInfo8" type="xsd:string" />
-             <xsd:element name="billInfo9" type="xsd:string" />
-             <xsd:element name="billInfo10" type="xsd:string" />
-             <xsd:element name="billInfo11" type="xsd:string" />
-             <xsd:element name="billInfo12" type="xsd:string" />
-             <xsd:element name="billInfo13" type="xsd:string" />
-             <xsd:element name="billInfo14" type="xsd:string" />
-             <xsd:element name="billInfo15" type="xsd:string" />
-             <xsd:element name="billInfo16" type="xsd:string" />
-             <xsd:element name="billInfo17" type="xsd:string" />
-             <xsd:element name="billInfo18" type="xsd:string" />
-             <xsd:element name="billInfo19" type="xsd:string" />
-             <xsd:element name="billInfo20" type="xsd:string" />
-             <xsd:element name="billInfo21" type="xsd:string" />
-             <xsd:element name="billInfo22" type="xsd:string" />
-             <xsd:element name="billInfo23" type="xsd:string" />
-             <xsd:element name="billInfo24" type="xsd:string" />
-             <xsd:element name="billInfo25" type="xsd:string" />
+                <xsd:element name="billInfo9" type="xsd:string" />
+                <xsd:element name="billInfo10" type="xsd:string" />
+                <xsd:element name="billInfo11" type="xsd:string" />
+                <xsd:element name="billInfo12" type="xsd:string" />
+                <xsd:element name="billInfo13" type="xsd:string" />
+                <xsd:element name="billInfo14" type="xsd:string" />
+                <xsd:element name="billInfo15" type="xsd:string" />
+                <xsd:element name="billInfo16" type="xsd:string" />
+                <xsd:element name="billInfo17" type="xsd:string" />
+                <xsd:element name="billInfo18" type="xsd:string" />
+                <xsd:element name="billInfo19" type="xsd:string" />
+                <xsd:element name="billInfo20" type="xsd:string" />
+                <xsd:element name="billInfo21" type="xsd:string" />
+                <xsd:element name="billInfo22" type="xsd:string" />
+                <xsd:element name="billInfo23" type="xsd:string" />
+                <xsd:element name="billInfo24" type="xsd:string" />
+                <xsd:element name="billInfo25" type="xsd:string" />
                 <xsd:element type="tns:billDetail" name="billDetails" minOccurs="0"/>
                 <xsd:element type="tns:status" name="status" minOccurs="0"/>
-
                 <xsd:element name="criteriaMismatch" type="xsd:string"
                              maxOccurs="unbounded" />
-
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-
     <xsd:element name="pendingTopUpRequest">
         <xsd:complexType>
             <xsd:sequence>
@@ -80,7 +74,6 @@
                 <xsd:element name="billKey2" type="xsd:string" />
                 <xsd:element name="billKey3" type="xsd:string" />
                 <xsd:element name="paidBills" type="xsd:string" />
-
                 <xsd:element name="paymentAmount" type="xsd:int" />
                 <xsd:element name="currency" type="xsd:string" />
                 <xsd:element name="transactionId" type="xsd:string" />
@@ -93,11 +86,9 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
     <xsd:element name="paymentResult">
         <xsd:complexType>
             <xsd:sequence>
-
                 <xsd:element name="billInfo1" type="xsd:string" />
                 <xsd:element name="billInfo2" type="xsd:string" />
                 <xsd:element name="billInfo3" type="xsd:string" />
@@ -124,15 +115,11 @@
                 <xsd:element name="billInfo24" type="xsd:string" />
                 <xsd:element name="billInfo25" type="xsd:string" />
                 <xsd:element type="tns:status" name="status" minOccurs="0"/>
-
                 <xsd:element name="criteriaMismatch" type="xsd:string"
                              maxOccurs="unbounded" />
-
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-
     <xsd:element name="reversePendingTopUpRequest">
         <xsd:complexType>
             <xsd:sequence>
@@ -159,11 +146,38 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
-
     <xsd:element name="reverseResult">
         <xsd:complexType>
             <xsd:sequence>
+                <xsd:element type="tns:status" name="status" minOccurs="0"/>
+                <xsd:element name="criteriaMismatch" type="xsd:string"  maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+
+    <xsd:element name="checkStatusInquiryRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="can" type="xsd:string"/>
+                <xsd:element name="amount" type="xsd:long"/>
+                <xsd:element name="trxDateTime" type="xsd:dateTime" />
+                <xsd:element name="counterdata" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+
+
+    <xsd:element name="checkStatusResp">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="can" type="xsd:string"/>
+                <xsd:element name="amount" type="xsd:long"/>
+                <xsd:element name="trxDateTime" type="xsd:dateTime" />
+                <xsd:element name="counterdata" type="xsd:string"/>
                 <xsd:element type="tns:status" name="status" minOccurs="0"/>
                 <xsd:element name="criteriaMismatch" type="xsd:string"  maxOccurs="unbounded" />
             </xsd:sequence>
@@ -184,21 +198,15 @@
             <xsd:element type="xsd:string" name="statusDescription"/>
         </xsd:sequence>
     </xsd:complexType>
-
     <xsd:complexType name="billDetail">
         <xsd:sequence>
             <xsd:element name="billCode" type="xsd:string" />
             <xsd:element name="billName" type="xsd:string" />
-            <xsd:element name="billShortName" type="xsd:string" />
+            <xsd:element name="billShortName" type="xsd:string"/>
             <xsd:element name="billAmount" type="xsd:string" />
             <xsd:element  name="reference1" type="xsd:string"/>
             <xsd:element  name="reference2" type="xsd:string"/>
             <xsd:element  name="reference3" type="xsd:string"/>
-
         </xsd:sequence>
     </xsd:complexType>
-
-
-
-
 </xsd:schema>
